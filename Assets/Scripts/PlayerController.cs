@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Animator an;
-    
+    [SerializeField] BoxCollider2D cd; 
     void Update()
     {
         Movement();
@@ -33,27 +33,29 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            an.SetBool("jmp", true);
-        }
-
+        float spe = Input.GetAxis("Vertical");
+        an.SetFloat("ver_speed", spe);
     }
 
     void setfalsejmp()
     {
-        an.SetBool("jmp", false);
+        an.SetFloat("ver_speed", 0);
     }
 
     void Crouch()
     {
+        
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             an.SetBool("crch", true);
+            cd.size = new Vector2(0.5198063f, 1.2f);
+            cd.offset = new Vector2(-0.01084822f, 0.56f);
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             an.SetBool("crch", false);
+            cd.size = new Vector2(0.5198063f, 2.07163f);
+            cd.offset = new Vector2(-0.01084822f, 0.9851117f);
         }
 
     }
