@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
             {
                 scale.x = Mathf.Abs(scale.x);
             }
-            float y= speed * horizontal * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x + y, transform.position.y, transform.position.z);
+            float dist= speed * horizontal * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + dist, transform.position.y, transform.position.z);
 
         }
         
