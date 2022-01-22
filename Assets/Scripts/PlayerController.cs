@@ -5,9 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Animator an;
-    [SerializeField] BoxCollider2D cd; 
+    [SerializeField] BoxCollider2D cd;
+    [SerializeField] float speed;
+    [SerializeField] float jmp;
+    Rigidbody2D rb;
+
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
+      
         Movement();
         Jump();
         Crouch();
@@ -16,24 +26,35 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
-        float vel = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Horizontal");
 
-        an.SetFloat("speed", Mathf.Abs(vel));
+        an.SetFloat("speed", Mathf.Abs(horizontal));
         Vector2 scale = transform.localScale;
-        if (vel < 0)
+        if(horizontal!=0 && !an.GetBool("crch"))
         {
-            scale.x = (-1) * Mathf.Abs(scale.x);
+            if (horizontal < 0)
+            {
+                scale.x = (-1) * Mathf.Abs(scale.x);
+            }
+            else if (horizontal > 0)
+            {
+                scale.x = Mathf.Abs(scale.x);
+            }
+            float y= speed * horizontal * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + y, transform.position.y, transform.position.z);
+
         }
-        else if (vel > 0)
-        {
-            scale.x = Mathf.Abs(scale.x);
-        }
+        
         transform.localScale = scale;
     }
 
     void Jump()
     {
         float spe = Input.GetAxis("Vertical");
+        if(spe>0)
+        {
+            rb.AddForce(new Vector2(0f, spe * jmp *Time.deltaTime), ForceMode2D.Impulse);
+        }
         an.SetFloat("ver_speed", spe);
     }
 
@@ -44,13 +65,22 @@ public class PlayerController : MonoBehaviour
 
     void Crouch()
     {
+        Vector2 scale = transform.localScale;
         
-        if(Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             an.SetBool("crch", true);
             cd.size = new Vector2(0.5198063f, 1.2f);
             cd.offset = new Vector2(-0.01084822f, 0.56f);
-        }
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                scale.x = (-1) * Mathf.Abs(scale.x);
+            }
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                scale.x = Mathf.Abs(scale.x);
+            } 
+        } 
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             an.SetBool("crch", false);
