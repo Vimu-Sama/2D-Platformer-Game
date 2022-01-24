@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] BoxCollider2D cd;
     [SerializeField] float speed;
     [SerializeField] float jmp;
+    [SerializeField] bool isGrounded = true;
     Rigidbody2D rb;
 
 
@@ -51,16 +52,21 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         float spe = Input.GetAxis("Vertical");
-        if(spe>0)
+        if(spe>0 && isGrounded)
         {
-            rb.AddForce(new Vector2(0f, spe * jmp *Time.deltaTime), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f, jmp *Time.deltaTime), ForceMode2D.Impulse);
+            an.SetFloat("ver_speed", spe);
+            isGrounded = false;
         }
-        an.SetFloat("ver_speed", spe);
+        
+
     }
+
 
     void setfalsejmp()
     {
         an.SetFloat("ver_speed", 0);
+        isGrounded = true ;
     }
 
     void Crouch()
@@ -90,5 +96,5 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+    
 }
