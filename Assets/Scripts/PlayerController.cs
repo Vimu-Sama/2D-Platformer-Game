@@ -51,13 +51,13 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        float spe = Input.GetAxis("Vertical");
-        if(spe>0 && isGrounded)
+        if(Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jmp *Time.deltaTime), ForceMode2D.Impulse);
-            an.SetFloat("ver_speed", spe);
+            an.SetBool("jmp", true);
             isGrounded = false;
         }
+        
         
 
     }
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     void setfalsejmp()
     {
-        an.SetFloat("ver_speed", 0);
+        an.SetBool("jmp", false);
         isGrounded = true ;
     }
 
