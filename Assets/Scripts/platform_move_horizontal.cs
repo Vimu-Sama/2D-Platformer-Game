@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class platform_move_horizontal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject gb;
+    [SerializeField] float speed;
+    bool inside = false;
+    
+
+    private void Update()
     {
-        
+        if(inside)
+        {
+            if(gb.transform.position.x < 45.09f)
+            {
+                gb.transform.position = new Vector3(gb.transform.position.x+ Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        inside = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

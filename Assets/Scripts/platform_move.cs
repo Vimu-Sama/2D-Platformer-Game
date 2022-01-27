@@ -29,11 +29,11 @@ public class platform_move : MonoBehaviour
 
         if(up)
         {
-            v.transform.position = new Vector2(v.position.x, v.position.y + platform_speed * Time.deltaTime);
+            v.transform.position = new Vector3(v.position.x, v.position.y + platform_speed * Time.deltaTime, v.position.z);
         }
         else if(!up)
         {
-            v.transform.position = new Vector2(v.position.x, v.position.y - platform_speed * Time.deltaTime);
+            v.transform.position = new Vector3(v.position.x, v.position.y - platform_speed * Time.deltaTime, v.position.z);
         }
     }
 }
