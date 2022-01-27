@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
-
+        an.SetBool("run", det.getboolean());
         an.SetFloat("speed", Mathf.Abs(horizontal));
         Vector2 scale = transform.localScale;
         if(horizontal!=0 && !an.GetBool("crch"))
