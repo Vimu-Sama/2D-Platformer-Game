@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W) && det.getboolean())
         {
-            rb.AddForce(new Vector2(0f, jmp *Time.deltaTime), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(0, jmp);
             an.SetBool("jmp", true);
             //isGrounded = false;
         }
