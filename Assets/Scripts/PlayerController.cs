@@ -97,6 +97,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+    void set_death_false()
+    {
+        an.SetBool("already_dead", true);
+    }
 
 }
