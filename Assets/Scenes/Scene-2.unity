@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   an: {fileID: 299163845}
+  del: 0.5
 --- !u!61 &15583519
 BoxCollider2D:
   m_ObjectHideFlags: 0
