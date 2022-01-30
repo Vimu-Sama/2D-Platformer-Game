@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Coin_Updating : MonoBehaviour
 {
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public int coins;
+    public TextMeshProUGUI score;
+    private void Start()
     {
-        if(collision.gameObject.tag=="Player")
-        {
-            Debug.Log("got it!!");
-            Destroy(gameObject);
-        }
+        coins = 0;
     }
+    private void Update()
+    {
+        score.text = "Score: " + coins;
+    }
+
 }
