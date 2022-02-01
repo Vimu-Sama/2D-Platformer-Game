@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420714394784287153}
   - component: {fileID: 4121479993068608962}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ground_check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 7751561514590245570}
   - component: {fileID: 449571316809943245}
   - component: {fileID: 5208231241801900480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
