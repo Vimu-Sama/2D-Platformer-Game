@@ -6,6 +6,8 @@ TagManager:
   tags:
   - land
   - moving_land
+  - coin
+  - Enemy
   layers:
   - Default
   - TransparentFX

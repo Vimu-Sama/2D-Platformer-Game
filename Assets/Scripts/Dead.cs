@@ -10,16 +10,24 @@ public class Dead : MonoBehaviour
     //[SerializeField] Canvas canvas;
     [SerializeField] Animator an;
     [SerializeField] float del ;
+    public bool heart_reached_zero;
     float time;
     private void Start()
     {
         an.SetBool("already_dead", false);
+        heart_reached_zero = false;
         time = 0f;
     }
 
 
     private void Update()
     {
+        if(heart_reached_zero)
+        {
+            Debug.Log("the heart reached zero also worked");
+            an.SetBool("dead", true);
+            load_scene = true;
+        }
         if(load_scene)
         {
             time += Time.deltaTime;

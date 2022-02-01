@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] LayerMask ground_layer ;
     [SerializeField] float flip_time;
     [SerializeField] Animator an;
+    [SerializeField] Collider2D body;
+    [SerializeField] health_update hu;
     float time;
     Rigidbody2D rb;
     private void Start()
@@ -23,7 +25,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (turn)
+        if (turn || body.IsTouchingLayers(ground_layer))
         {
             patrol = false;
             an.SetBool("walk", false);
@@ -40,7 +42,7 @@ public class Enemy : MonoBehaviour
         }
         if (patrol)
         {
-            rb.velocity= new Vector3(transform.position.x* movespeed * Time.deltaTime, transform.position.y, transform.position.z);
+            rb.velocity= new Vector3(transform.position.x* movespeed * Time.fixedDeltaTime, transform.position.y, transform.position.z);
         }
         
     }
@@ -50,6 +52,15 @@ public class Enemy : MonoBehaviour
         if(patrol)
         {
             turn = !(Physics2D.OverlapCircle(ground_check.position, 0.1f, ground_layer));
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag=="Player")
+        {
+            Debug.Log("health deducted");
+            hu.health -= 1;
         }
     }
 

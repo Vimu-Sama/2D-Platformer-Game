@@ -17,7 +17,7 @@ public class got_coin : MonoBehaviour
         {
             cp.coins += 1;
             an.SetBool("coin_flip", true);
-            Debug.Log("COIN WORKED-->   "+ an.GetBool("coin_flip"));
+            //Debug.Log("COIN WORKED-->   "+ an.GetBool("coin_flip"));
             
 
         }
