@@ -41,16 +41,6 @@ public class Dead : MonoBehaviour
         load_scene = true;
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag=="Player")
-        {
-            Debug.Log("Game Over!!!");
-            an.SetBool("dead", true);
-            load_scene = true;
-        }
-    }
-
     public void reverse()
     {
         SceneManager.LoadScene("Scene-1");

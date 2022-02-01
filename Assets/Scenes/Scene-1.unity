@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 71045750}
   - component: {fileID: 71045752}
   - component: {fileID: 71045751}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (8)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 553110422}
   - component: {fileID: 553110424}
   - component: {fileID: 553110423}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (14)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -1330,6 +1330,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &619197574 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1633419533183069774, guid: d45956bfbea42d94db5f0b5aa24b2484,
+    type: 3}
+  m_PrefabInstance: {fileID: 7668604465472437571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &628839787
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1409,7 +1415,7 @@ GameObject:
   - component: {fileID: 715261766}
   - component: {fileID: 715261768}
   - component: {fileID: 715261767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (12)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -1616,7 +1622,7 @@ GameObject:
   - component: {fileID: 855904835}
   - component: {fileID: 855904837}
   - component: {fileID: 855904836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (2)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -1963,7 +1969,7 @@ GameObject:
   - component: {fileID: 979170385}
   - component: {fileID: 979170387}
   - component: {fileID: 979170386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (9)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -2254,7 +2260,7 @@ GameObject:
   - component: {fileID: 1135266688}
   - component: {fileID: 1135266690}
   - component: {fileID: 1135266689}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (1)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -2418,7 +2424,7 @@ GameObject:
   - component: {fileID: 1190486228}
   - component: {fileID: 1190486230}
   - component: {fileID: 1190486229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (10)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -2839,7 +2845,7 @@ GameObject:
   - component: {fileID: 1409628704}
   - component: {fileID: 1409628706}
   - component: {fileID: 1409628705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (13)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -2996,7 +3002,7 @@ GameObject:
   - component: {fileID: 1494863263}
   - component: {fileID: 1494863265}
   - component: {fileID: 1494863264}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (7)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -3107,7 +3113,7 @@ GameObject:
   - component: {fileID: 1505968046}
   - component: {fileID: 1505968048}
   - component: {fileID: 1505968047}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (4)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -3303,7 +3309,7 @@ GameObject:
   - component: {fileID: 1730508165}
   - component: {fileID: 1730508164}
   - component: {fileID: 1730508163}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (11)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -3578,7 +3584,7 @@ GameObject:
   - component: {fileID: 1917745987}
   - component: {fileID: 1917745989}
   - component: {fileID: 1917745988}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (5)
   m_TagString: land
   m_Icon: {fileID: 0}
@@ -4137,10 +4143,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3001657955968292922, guid: d45956bfbea42d94db5f0b5aa24b2484,
+    - target: {fileID: 3420714394784287153, guid: d45956bfbea42d94db5f0b5aa24b2484,
         type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208231241801900480, guid: d45956bfbea42d94db5f0b5aa24b2484,
+        type: 3}
+      propertyPath: an
+      value: 
+      objectReference: {fileID: 619197574}
+    - target: {fileID: 5208231241801900480, guid: d45956bfbea42d94db5f0b5aa24b2484,
+        type: 3}
+      propertyPath: flip_time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208231241801900480, guid: d45956bfbea42d94db5f0b5aa24b2484,
+        type: 3}
+      propertyPath: movespeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5546380814349427031, guid: d45956bfbea42d94db5f0b5aa24b2484,
         type: 3}
@@ -4150,7 +4171,7 @@ PrefabInstance:
     - target: {fileID: 5546380814349427031, guid: d45956bfbea42d94db5f0b5aa24b2484,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.1
+      value: 8.77
       objectReference: {fileID: 0}
     - target: {fileID: 5546380814349427031, guid: d45956bfbea42d94db5f0b5aa24b2484,
         type: 3}
@@ -4201,16 +4222,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834136342080185757, guid: d45956bfbea42d94db5f0b5aa24b2484,
-        type: 3}
-      propertyPath: an
-      value: 
-      objectReference: {fileID: 299163845}
-    - target: {fileID: 7834136342080185757, guid: d45956bfbea42d94db5f0b5aa24b2484,
-        type: 3}
-      propertyPath: del
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d45956bfbea42d94db5f0b5aa24b2484, type: 3}
