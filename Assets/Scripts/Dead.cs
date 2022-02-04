@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Dead : MonoBehaviour
 {
     bool load_scene = false;
-    
-    //[SerializeField] Canvas canvas;
+    public PlayerController pc;
+    [SerializeField] GameObject canvas;
     [SerializeField] Animator an;
     [SerializeField] float del ;
     public bool heart_reached_zero;
@@ -30,13 +30,14 @@ public class Dead : MonoBehaviour
         }
         if(load_scene)
         {
+            pc.isdead=true;
             time += Time.deltaTime;
         }
         if(time>=del)
         {
             //Debug.Log("worked here!");
-            Scene s = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(s.name);
+            Debug.Log("working");
+            canvas.SetActive(true);
         }
         
     }
@@ -44,7 +45,6 @@ public class Dead : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Game Over!!!");
         an.SetBool("dead", true);
         load_scene = true;
         

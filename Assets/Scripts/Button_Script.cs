@@ -16,4 +16,9 @@ public class Button_Script : MonoBehaviour
         Debug.Log("Player has quit the game");
     }
 
+
+    public void deactivate_canvas(GameObject cv)
+    {
+        cv.SetActive(false);
+    }
 }
