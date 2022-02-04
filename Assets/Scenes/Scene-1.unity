@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e6d3e2568b4de43b98e80b481b5a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 299163848}
   canvas: {fileID: 828793799}
   an: {fileID: 299163845}
   del: 0.5
@@ -818,7 +819,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 11.235931, z: 22.471924, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1094,6 +1095,7 @@ MonoBehaviour:
   speed: 5
   jmp: 5
   det: {fileID: 2093911566}
+  isdead: 0
 --- !u!4 &299163853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1534678754380642641, guid: aba3826e978a2184787cbc3f878b099f,
@@ -2056,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247.4, y: 187.55}
+  m_AnchoredPosition: {x: -252.3, y: 172.9}
   m_SizeDelta: {x: 210.287, y: 50.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619588397
