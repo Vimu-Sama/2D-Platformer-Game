@@ -113,9 +113,9 @@ TextureImporter:
       name: PushableBox_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 58
         y: 0
-        width: 588
+        width: 461
         height: 512
       alignment: 9
       pivot: {x: 0.503, y: 0.47976458}
@@ -134,12 +134,12 @@ TextureImporter:
       name: PushableBox_1
       rect:
         serializedVersion: 2
-        x: 587
+        x: 564
         y: 0
-        width: 436
+        width: 460
         height: 512
       alignment: 9
-      pivot: {x: 0.49042785, y: 0.4797646}
+      pivot: {x: 0.5392802, y: 0.48268878}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,7 +206,7 @@ TextureImporter:
       - {x: 434, y: -445}
       - {x: 435, y: -404}
     bones: []
-    spriteID: 
+    spriteID: d74f5adaeac3f8a4d8035c85ece892d4
     internalID: 0
     vertices: []
     indices: 

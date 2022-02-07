@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
     {
         if(col.gameObject.tag=="Player")
         {
-            Debug.Log("health deducted");
+            //Debug.Log("health deducted");
             hu.health -= 1;
         }
     }

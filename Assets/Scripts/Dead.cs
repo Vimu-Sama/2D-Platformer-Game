@@ -35,8 +35,6 @@ public class Dead : MonoBehaviour
         }
         if(time>=del)
         {
-            //Debug.Log("worked here!");
-            Debug.Log("working");
             canvas.SetActive(true);
         }
         

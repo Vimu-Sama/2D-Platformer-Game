@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Button_Script : MonoBehaviour
 {
+    int current_level = 0;
+    private void Awake()
+    {
+        current_level = PlayerPrefs.GetInt("current_level");
+    }
     public void JumpToScene(int i)
     {
         SceneManager.LoadScene(i);
@@ -21,4 +26,10 @@ public class Button_Script : MonoBehaviour
     {
         cv.SetActive(false);
     }
+
+    public void special_jump()
+    {
+        SceneManager.LoadScene(current_level);
+    }
+
 }
