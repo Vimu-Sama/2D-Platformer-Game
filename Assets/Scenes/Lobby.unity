@@ -488,13 +488,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 654521886}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: special_jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Button_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 598860952287813456, guid: 93d18a447e9d47442a159ba29be7303f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 598860952287813470, guid: 93d18a447e9d47442a159ba29be7303f,
         type: 3}
       propertyPath: m_Name
-      value: Button (3)
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 598860952287813471, guid: 93d18a447e9d47442a159ba29be7303f,
         type: 3}
@@ -863,7 +893,7 @@ GameObject:
   - component: {fileID: 838952672}
   - component: {fileID: 838952671}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,7 +1524,7 @@ GameObject:
   - component: {fileID: 1715199072}
   - component: {fileID: 1715199071}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1672,7 +1702,7 @@ PrefabInstance:
     - target: {fileID: 598860952287813470, guid: 93d18a447e9d47442a159ba29be7303f,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Levels
       objectReference: {fileID: 0}
     - target: {fileID: 598860952287813470, guid: 93d18a447e9d47442a159ba29be7303f,
         type: 3}

@@ -24,7 +24,7 @@ public class Dead : MonoBehaviour
     {
         if(heart_reached_zero)
         {
-            Debug.Log("the heart reached zero also worked");
+            //Debug.Log("the heart reached zero also worked");
             an.SetBool("dead", true);
             load_scene = true;
         }
