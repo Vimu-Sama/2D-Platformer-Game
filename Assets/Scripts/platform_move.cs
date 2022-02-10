@@ -6,6 +6,8 @@ public class platform_move : MonoBehaviour
 {
     Transform v;
     [SerializeField] float platform_speed ;
+    [SerializeField] float max_up;
+    [SerializeField] float max_down;
     bool up ;
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,11 @@ public class platform_move : MonoBehaviour
     void Update()
     {
         
-        if(v.position.y<= -2.46f)
+        if(v.position.y<= max_down)
         {
             up = true;
         }
-        else if(v.position.y>= -0.38f)
+        else if(v.position.y>= max_up)
         {
             up = false ;
         }

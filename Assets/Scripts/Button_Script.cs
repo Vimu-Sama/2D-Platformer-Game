@@ -12,6 +12,7 @@ public class Button_Script : MonoBehaviour
     }
     public void JumpToScene(int i)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(i);
     }
 

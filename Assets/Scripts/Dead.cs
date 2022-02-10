@@ -43,8 +43,12 @@ public class Dead : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        an.SetBool("dead", true);
-        load_scene = true;
+        if(col.gameObject.tag=="Player")
+        {
+            an.SetBool("dead", true);
+            load_scene = true;
+        }
+        
         
     }
     public void reverse()
