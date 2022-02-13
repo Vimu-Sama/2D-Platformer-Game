@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private Button button;
     public string level;
-    private Button_Script bs; 
+    private Button_Script bs;
+    [SerializeField] GameObject gb;
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
         {
             case level_status.locked:
                 Debug.Log("Complete previous levels!!");
+                gb.SetActive(true);
+                StartCoroutine(new_rout());
                 break;
             case level_status.unlocked:
                 Debug.Log("Able to play");
@@ -38,7 +41,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    IEnumerator new_rout()
+    {
+        yield return new WaitForSeconds(4);
+        gb.SetActive(false);
+    }
 
     /* int level;
     [Header("Buttons")]

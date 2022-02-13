@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jmp;
     [SerializeField] detection det;
+    ParticleSystem ps; 
     public bool isdead;
    // [SerializeField] bool isGrounded = true;
     Rigidbody2D rb;
@@ -17,10 +18,17 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        ps = GetComponent<ParticleSystem>();
         isdead = false;
+        
     }
     void Update()
     {
+      if(an.GetBool("dead"))
+        {
+            ps.Play();
+        }
+
       if(!isdead)
         {
             Movement();

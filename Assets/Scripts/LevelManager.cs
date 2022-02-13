@@ -8,11 +8,13 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance{ get {return instance ;}}
     private void Awake()
     {
-        /*for(int i=1;i<=2;i++)
+        /*for(int i=1;i<=5;i++)
         {
             string level = i.ToString();
             PlayerPrefs.SetInt(level, 0);
-        } */
+        }
+        PlayerPrefs.SetInt("current_level", 1);
+        */
         if (instance == null)
         {
             instance = this;

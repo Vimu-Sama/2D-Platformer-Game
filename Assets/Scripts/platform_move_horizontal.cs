@@ -11,27 +11,35 @@ public class platform_move_horizontal : MonoBehaviour
     [SerializeField] string s;
     [SerializeField] bool no_trigger;
     bool inside = false;
+    bool move = true;
     private bool left;
 
     private void Update()
     {
+        if((no_trigger || inside)&& move)
+        { 
+            if (left)
+            {
+                gb.transform.position = new Vector3(gb.transform.position.x - Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
+            }
+            else
+            {
+                gb.transform.position = new Vector3(gb.transform.position.x + Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
+            }
+        }
+        
 
-        if(left)
-        {
-            gb.transform.position = new Vector3(gb.transform.position.x - Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
-        }
-        if(!left)
-        {
-            gb.transform.position = new Vector3(gb.transform.position.x + Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
-        }
         if(no_trigger)
         {
+            move = true;
             if (s == "move right")
             {
                 if (gb.transform.position.x < max_right)
                 {
                     left = false;
                 }
+                else
+                    move = false;
             }
             else if (s == "move left")
             {
@@ -40,6 +48,8 @@ public class platform_move_horizontal : MonoBehaviour
                     left = true;
                     //gb.transform.position = new Vector3(gb.transform.position.x - Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
                 }
+                else
+                    move = false;
             }
             else if (s == "both")
             {
@@ -64,6 +74,8 @@ public class platform_move_horizontal : MonoBehaviour
                     left = false;
                     //gb.transform.position = new Vector3(gb.transform.position.x + Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
                 }
+                else
+                    move = false;
             }
             else if(s=="move left")
             {
@@ -72,6 +84,8 @@ public class platform_move_horizontal : MonoBehaviour
                     left = true;
                     //gb.transform.position = new Vector3(gb.transform.position.x - Time.deltaTime, gb.transform.position.y, gb.transform.position.z);
                 }
+                else
+                    move = false;
             }
             else if(s=="both")
             {
